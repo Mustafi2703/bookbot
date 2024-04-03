@@ -9,7 +9,7 @@ def main():
     print()
 
     for item in chars_sorted_list:
-        if not item["char"].isalpha():
+        if not item["char"].isalpha(): #is an alphabet check
             continue
         print(f"The '{item['char']}' character was found {item['num']} times")
 
@@ -17,11 +17,11 @@ def main():
     #print(text)
     #print(count)
 
-
+#opening the file
 def get_book_text(path):
     with open(path) as f:
         return f.read()
-
+#sorting basis on num
 def sort_on(d):
     return d["num"]
 
@@ -30,7 +30,7 @@ def count_words(text):
     count = len(words)
     return count
 
-
+#create are new sorted list from a dictionary
 def sorted_list(char_dict):
     l = []
     for i in char_dict:
